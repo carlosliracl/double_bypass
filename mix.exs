@@ -4,7 +4,7 @@ defmodule DoubleBypass.Mixfile do
   def project do
     [
       app: :double_bypass,
-      version: "0.0.6",
+      version: "0.0.7",
       elixir: "~> 1.8",
       build_embedded: Mix.env() == :prod,
       start_permanent: Mix.env() == :prod,
@@ -21,9 +21,8 @@ defmodule DoubleBypass.Mixfile do
 
   defp deps do
     [
-      {:plug_cowboy, "~> 1.0"},
-      {:bypass, "~> 1.0"},
-      {:credo, "~> 1.4", only: :dev},
+      {:bypass, "~> 1.0 or ~> 2.0"},
+      {:credo, "~> 1.6", only: :dev},
       {:ex_doc, "~> 0.22.1", only: :dev},
       {:excoveralls, "~> 0.13", only: :test},
       {:httpoison, "~> 1.7", only: :test},
